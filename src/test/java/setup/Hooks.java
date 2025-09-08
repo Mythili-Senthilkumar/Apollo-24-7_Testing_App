@@ -10,7 +10,10 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
+import pages.ApolloProductsPage;
+import pages.BuyMedicinePage;
 import pages.LoginPage;
+import pages.PersonalcarePage;
 
 public class Hooks {
 
@@ -18,48 +21,50 @@ public class Hooks {
     public static ExtentReports extReport;
     public static ExtentTest extTest;
     public static LoginPage loginPage;
+    public static BuyMedicinePage buymedicinePage;
+    public static ApolloProductsPage apolloProductsPage;
+    public static PersonalcarePage personalcarePage;
 
-    // This will run before **all scenarios**, only if driver is null
     @Before(order = 0)
     public void setUp(Scenario scenario) {
-        if(driver == null) {                                   // Only open browser once
-        	
-            // Initialize ExtentReports once
-            if (extReport == null) {
-                ExtentSparkReporter spark = new ExtentSparkReporter("reports/ExtentReport.html");
-                extReport = new ExtentReports();
-                extReport.attachReporter(spark);
-            }
+        // Init ExtentReports once
+        if (extReport == null) {
+            ExtentSparkReporter spark = new ExtentSparkReporter("reports/ExtentReport.html");
+            extReport = new ExtentReports();
+            extReport.attachReporter(spark);
+        }
 
-            // Create test for this scenario 
-            extTest = extReport.createTest(scenario.getName());
-
-            // Start browser
+        // Open browser only once
+        if (driver == null) {
             driver = new ChromeDriver();
             driver.manage().window().maximize();
             driver.get("https://www.apollo247.com/");
+        }
 
-            // Initialize page objects
-            loginPage = new LoginPage(driver, extTest);
+        // Always create new ExtentTest for each scenario
+        String testName = scenario.getName();
+        if (testName == null || testName.trim().isEmpty()) {
+            testName = "Unnamed Scenario";
         }
-        
-        else {
-            // Browser already opened, just reuse
-            driver.get("https://www.apollo247.com/");
-            extTest = extReport.createTest(scenario.getName()); // new test node for reporting
-        }
+        extTest = extReport.createTest(testName);
+
+        // Re-init page objects for every scenario
+        loginPage = new LoginPage(driver, extTest);
+        buymedicinePage = new BuyMedicinePage(driver, extTest);
+        apolloProductsPage = new ApolloProductsPage(driver, extTest);
+        personalcarePage = new PersonalcarePage(driver, extTest);
     }
 
-    // Close browser **after all scenarios**, not per scenario
     @After(order = 0)
     public void tearDown() {
-        // Do NOT quit driver here if you want to reuse across scenarios
-        // You can quit driver in a separate hook after all tests
+        // Keep browser open for reuse during test run
+        // Close it at suite level if needed
     }
 
-    // hook to flush reports after all tests
     @After(order = 1)
     public void flushReport() {
-        if(extReport != null) extReport.flush();
+        if (extReport != null) {
+            extReport.flush();
+        }
     }
 }

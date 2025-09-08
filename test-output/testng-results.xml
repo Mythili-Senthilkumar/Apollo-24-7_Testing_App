@@ -1,58 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<<<<<<< HEAD
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="8" passed="8" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-09-06T12:27:51 IST" name="Default suite" finished-at="2025-09-06T12:28:06 IST" duration-ms="14987">
-    <groups>
-      <group name="cucumber">
-        <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunner@587e5365]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
-      </group> <!-- cucumber -->
-    </groups>
-    <test started-at="2025-09-06T12:27:51 IST" name="Default test" finished-at="2025-09-06T12:28:06 IST" duration-ms="14987">
-      <class name="com.runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:com.runner.TestRunner@587e5365]" started-at="2025-09-06T12:27:51 IST" name="setUpClass" finished-at="2025-09-06T12:27:52 IST" duration-ms="671" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[org.testng.TestRunner@4f824872]]>
-=======
-<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
-  <reporter-output>
-  </reporter-output>
-  <suite started-at="2025-09-07T18:44:35 IST" name="Default suite" finished-at="2025-09-07T18:44:55 IST" duration-ms="19871">
+  <suite started-at="2025-09-08T21:07:15 IST" name="Default suite" finished-at="2025-09-08T21:08:17 IST" duration-ms="61797">
     <groups>
       <group name="cucumber">
         <method signature="AbstractTestNGCucumberTests.runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@587e5365]" name="runScenario" class="io.cucumber.testng.AbstractTestNGCucumberTests"/>
       </group> <!-- cucumber -->
     </groups>
-    <test started-at="2025-09-07T18:44:35 IST" name="Default test" finished-at="2025-09-07T18:44:55 IST" duration-ms="19871">
+    <test started-at="2025-09-08T21:07:15 IST" name="Default test" finished-at="2025-09-08T21:08:17 IST" duration-ms="61797">
       <class name="runner.TestRunner">
-        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@587e5365]" started-at="2025-09-07T18:44:35 IST" name="setUpClass" finished-at="2025-09-07T18:44:36 IST" duration-ms="901" status="PASS">
+        <test-method is-config="true" signature="setUpClass(org.testng.ITestContext)[pri:0, instance:runner.TestRunner@587e5365]" started-at="2025-09-08T21:07:15 IST" name="setUpClass" finished-at="2025-09-08T21:07:16 IST" duration-ms="813" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[org.testng.TestRunner@37e69c43]]>
->>>>>>> da471f6 (Day 2: Apollo 247 website launched and logged in)
+                <![CDATA[org.testng.TestRunner@3e046e39]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUpClass -->
-<<<<<<< HEAD
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:com.runner.TestRunner@587e5365]" started-at="2025-09-06T12:27:52 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-06T12:28:06 IST" duration-ms="14212" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA["Launch the website in browser"]]>
-=======
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@587e5365]" started-at="2025-09-07T18:44:36 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-07T18:44:42 IST" duration-ms="6182" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@587e5365]" started-at="2025-09-08T21:07:16 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-08T21:07:27 IST" duration-ms="11309" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA["User launches the website in different browsers"]]>
->>>>>>> da471f6 (Day 2: Apollo 247 website launched and logged in)
               </value>
             </param>
             <param index="1">
@@ -64,14 +37,55 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-<<<<<<< HEAD
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:com.runner.TestRunner@587e5365]" started-at="2025-09-06T12:28:06 IST" name="tearDownClass" finished-at="2025-09-06T12:28:06 IST" duration-ms="44" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@587e5365]" started-at="2025-09-08T21:07:27 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-08T21:07:32 IST" duration-ms="4669" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDownClass -->
-      </class> <!-- com.runner.TestRunner -->
-=======
-        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@587e5365]" started-at="2025-09-07T18:44:42 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-07T18:44:55 IST" duration-ms="12665" status="FAIL">
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@587e5365]" started-at="2025-09-08T21:07:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-08T21:07:32 IST" duration-ms="3" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[""]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@587e5365]" started-at="2025-09-08T21:07:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-08T21:07:32 IST" duration-ms="330" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["user unable to login with empty field"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Login"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@587e5365]" started-at="2025-09-08T21:07:32 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-08T21:08:06 IST" duration-ms="33596" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -84,27 +98,62 @@
               </value>
             </param>
           </params>
-          <exception class="java.lang.AssertionError">
-            <message>
-              <![CDATA[OTP verification failed: Incorrect OTP, 2 attempts left]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[java.lang.AssertionError: OTP verification failed: Incorrect OTP, 2 attempts left
-at pages.LoginPage.validateOtpResult(LoginPage.java:78)
-at stepdefinitions.Login.the_user_enters_the_otp(Login.java:39)
-at ✽.the user enters the otp(file:///D:/CapgeminiTesting/Apollo_247_testing_app/src/test/resources/features/login.feature:9)
-]]>
-            </full-stacktrace>
-          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- runScenario -->
-        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@587e5365]" started-at="2025-09-07T18:44:55 IST" name="tearDownClass" finished-at="2025-09-07T18:44:55 IST" duration-ms="37" status="PASS">
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@587e5365]" started-at="2025-09-08T21:08:06 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-08T21:08:11 IST" duration-ms="4732" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["user able to open buy medicines"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Buy Medicine"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@587e5365]" started-at="2025-09-08T21:08:11 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-08T21:08:12 IST" duration-ms="1050" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["user able to open apollo products"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Apollo Products"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method signature="runScenario(io.cucumber.testng.PickleWrapper,io.cucumber.testng.FeatureWrapper)[pri:0, instance:runner.TestRunner@587e5365]" started-at="2025-09-08T21:08:12 IST" name="runScenario" description="Runs Cucumber Scenarios" data-provider="scenarios" finished-at="2025-09-08T21:08:17 IST" duration-ms="5154" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA["user able to open personal care in apollo products"]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA["Personal care"]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- runScenario -->
+        <test-method is-config="true" signature="tearDownClass()[pri:0, instance:runner.TestRunner@587e5365]" started-at="2025-09-08T21:08:17 IST" name="tearDownClass" finished-at="2025-09-08T21:08:17 IST" duration-ms="38" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDownClass -->
       </class> <!-- runner.TestRunner -->
->>>>>>> da471f6 (Day 2: Apollo 247 website launched and logged in)
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

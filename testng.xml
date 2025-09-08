@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="ApolloSuite" parallel="false">
+  <test  name="ApolloTest">
+   <classes>
+      <class name="runner.LaunchRunner"/>
+      <class name="runner.LoginRunner"/>
+      <class name="runner.BuyMedicineRunner"/>
+      <class name="runner.ApolloProductsRunner"/>
+    </classes>
+  </test> <!-- ApolloTest -->
+</suite> <!-- Suite -->

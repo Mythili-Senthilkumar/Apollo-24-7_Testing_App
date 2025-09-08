@@ -1,30 +1,18 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
-<<<<<<< HEAD
   <groupId>.com.project</groupId>
   <artifactId>Apollo_247_testing_app</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   
     <dependencies>
-=======
-  <groupId>com.project</groupId>
-  <artifactId> Apollo_247_testing_app</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  
-<dependencies>
->>>>>>> da471f6 (Day 2: Apollo 247 website launched and logged in)
-  
   <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
     <version>4.35.0</version>
   </dependency>
   
-<<<<<<< HEAD
-  <!-- https://mvnrepository.com/artifact/org.testng/testng -->
-=======
  <!-- https://mvnrepository.com/artifact/org.testng/testng -->
->>>>>>> da471f6 (Day 2: Apollo 247 website launched and logged in)
+
   <dependency>
     <groupId>org.testng</groupId>
     <artifactId>testng</artifactId>
@@ -66,10 +54,6 @@
 	<version>5.4.1</version>
 </dependency>
 
-<<<<<<< HEAD
-=======
-
->>>>>>> da471f6 (Day 2: Apollo 247 website launched and logged in)
 <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
 <dependency>
     <groupId>com.aventstack</groupId>
@@ -77,11 +61,7 @@
     <version>5.1.2</version>
 </dependency>
   </dependencies>
-  
-<<<<<<< HEAD
-  
-=======
->>>>>>> da471f6 (Day 2: Apollo 247 website launched and logged in)
+
   <!--*to change JVM version put below code in pom.xml file* -->
 	<build>
 		<plugins>
@@ -96,14 +76,9 @@
 			</plugin>
 		</plugins>
 	</build> 
-<<<<<<< HEAD
 
 
 
 </project>
   
   
-=======
-  
-</project>
->>>>>>> da471f6 (Day 2: Apollo 247 website launched and logged in)
