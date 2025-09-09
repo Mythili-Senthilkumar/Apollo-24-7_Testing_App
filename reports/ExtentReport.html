@@ -35,7 +35,7 @@
 <a href="#"><span class="badge badge-primary"></span></a>
 </li>
 <li class="m-r-10">
-<a href="#"><span class="badge badge-primary">Sept 8, 2025 09:07:16 pm</span></a>
+<a href="#"><span class="badge badge-primary">Sept 9, 2025 01:42:28 pm</span></a>
 </li>
 </ul>
 </div>
@@ -67,6 +67,7 @@
 <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-exclamation-circle"></i></a>
 <ul id="status-toggle" class="dropdown-menu dropdown-md p-v-0">
 <a class="dropdown-item" status="pass" href="#"><span>Pass</span><span class="status success"></span></a>
+<a class="dropdown-item" status="fail" href="#"><span>Fail</span><span class="status danger"></span></a>
 <div class="dropdown-divider"></div>
 <a status="clear" class="dropdown-item" href="#"><span>Clear</span><span class="pull-right"><i class="fa fa-close"></i></span></a>
 </ul>
@@ -81,7 +82,7 @@
           <div class="test-detail">
             <p class="name">User launches the website in different browsers</p>
             <p class="text-sm">
-              <span>9:07:27 pm</span> / <span>00:00:00:000</span>
+              <span>1:42:34 pm</span> / <span>00:00:01:311</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -90,25 +91,46 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">User launches the website in different browsers</h5>
-<span class='badge badge-success'>09.08.2025 9:07:27 pm</span>
-<span class='badge badge-danger'>09.08.2025 9:07:27 pm</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>09.09.2025 1:42:34 pm</span>
+<span class='badge badge-danger'>09.09.2025 1:42:36 pm</span>
+<span class='badge badge-default'>00:00:01:311</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=1</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:42:34 pm</td>
+        <td>
+          Browser launched and page objects initialized.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:42:36 pm</td>
+        <td>
+          Scenario passed successfully.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
         <li class="test-item"  status="pass" test-id="2"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">Unnamed Scenario</p>
+            <p class="name">user unable to login with invalid phone number</p>
             <p class="text-sm">
-              <span>9:07:27 pm</span> / <span>00:00:04:628</span>
+              <span>1:42:36 pm</span> / <span>00:00:07:042</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -116,10 +138,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">Unnamed Scenario</h5>
-<span class='badge badge-success'>09.08.2025 9:07:27 pm</span>
-<span class='badge badge-danger'>09.08.2025 9:07:32 pm</span>
-<span class='badge badge-default'>00:00:04:628</span>
+<h5 class="test-status text-pass">user unable to login with invalid phone number</h5>
+<span class='badge badge-success'>09.09.2025 1:42:36 pm</span>
+<span class='badge badge-danger'>09.09.2025 1:42:43 pm</span>
+<span class='badge badge-default'>00:00:07:042</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=2</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -131,18 +153,24 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>9:07:32 pm</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:42:36 pm</td>
         <td>
-          Continue button disabled
-    <div class="row mb-3"><div class="col-md-3">
-    
-
-<img data-featherlight='D:\CapgeminiTesting\Apollo_247_testing_app\screenshot\Continue_button_disabled_20250908_210732.png' src="D:\CapgeminiTesting\Apollo_247_testing_app\screenshot\Continue_button_disabled_20250908_210732.png">
-  
-    
-
-    </div></div>
+          Browser launched and page objects initialized.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:42:43 pm</td>
+        <td>
+          Continue button state (disabled expected): true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:42:43 pm</td>
+        <td>
+          Scenario passed successfully.
         </td>
       </tr>
   </tbody>
@@ -155,9 +183,9 @@
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">user unable to login with empty field</p>
+            <p class="name">user unable to login with invalid phone number</p>
             <p class="text-sm">
-              <span>9:07:32 pm</span> / <span>00:00:00:294</span>
+              <span>1:42:43 pm</span> / <span>00:00:04:939</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -165,10 +193,10 @@
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">user unable to login with empty field</h5>
-<span class='badge badge-success'>09.08.2025 9:07:32 pm</span>
-<span class='badge badge-danger'>09.08.2025 9:07:32 pm</span>
-<span class='badge badge-default'>00:00:00:294</span>
+<h5 class="test-status text-pass">user unable to login with invalid phone number</h5>
+<span class='badge badge-success'>09.09.2025 1:42:43 pm</span>
+<span class='badge badge-danger'>09.09.2025 1:42:48 pm</span>
+<span class='badge badge-default'>00:00:04:939</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=3</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -180,18 +208,24 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>9:07:32 pm</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:42:43 pm</td>
         <td>
-          Continue button disabled
-    <div class="row mb-3"><div class="col-md-3">
-    
-
-<img data-featherlight='D:\CapgeminiTesting\Apollo_247_testing_app\screenshot\Continue_button_disabled_20250908_210732.png' src="D:\CapgeminiTesting\Apollo_247_testing_app\screenshot\Continue_button_disabled_20250908_210732.png">
-  
-    
-
-    </div></div>
+          Browser launched and page objects initialized.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:42:48 pm</td>
+        <td>
+          Continue button state (disabled expected): true
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:42:48 pm</td>
+        <td>
+          Scenario passed successfully.
         </td>
       </tr>
   </tbody>
@@ -199,25 +233,25 @@
 </div>
           </div>
         </li>
-        <li class="test-item"  status="pass" test-id="4"
+        <li class="test-item"  status="fail" test-id="4"
           author=""
           tag=""
           device="">
           <div class="test-detail">
-            <p class="name">user is able to login with valid phone number</p>
+            <p class="name">user is unable to login with invalid OTP</p>
             <p class="text-sm">
-              <span>9:07:32 pm</span> / <span>00:00:33:544</span>
-              <span class="badge pass-bg log float-right">Pass</span>
+              <span>1:42:48 pm</span> / <span>00:00:15:327</span>
+              <span class="badge fail-bg log float-right">Fail</span>
             </p>
           </div>
           <div class="test-contents d-none">
 <div class="detail-head">
 <div class="p-v-10">
 <div class="info">
-<h5 class="test-status text-pass">user is able to login with valid phone number</h5>
-<span class='badge badge-success'>09.08.2025 9:07:32 pm</span>
-<span class='badge badge-danger'>09.08.2025 9:08:06 pm</span>
-<span class='badge badge-default'>00:00:33:544</span>
+<h5 class="test-status text-fail">user is unable to login with invalid OTP</h5>
+<span class='badge badge-success'>09.09.2025 1:42:48 pm</span>
+<span class='badge badge-danger'>09.09.2025 1:43:03 pm</span>
+<span class='badge badge-default'>00:00:15:327</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=4</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
@@ -229,14 +263,28 @@
   <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
   <tbody>
       <tr class="event-row">
-        <td><span class="badge log pass-bg">Pass</span></td>
-        <td>9:08:06 pm</td>
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:42:48 pm</td>
         <td>
-          OTP verified successfully
+          Browser launched and page objects initialized.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:02 pm</td>
+        <td>
+          Entered OTP and clicked verify within 45 seconds
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>1:43:03 pm</td>
+        <td>
+          OTP verification failed: Incorrect OTP, 2 attempts left
     <div class="row mb-3"><div class="col-md-3">
     
 
-<img data-featherlight='D:\CapgeminiTesting\Apollo_247_testing_app\screenshot\OTP_verified_successfully_20250908_210805.png' src="D:\CapgeminiTesting\Apollo_247_testing_app\screenshot\OTP_verified_successfully_20250908_210805.png">
+<img data-featherlight='screenshots\OTP verification failed: Incorrect OTP, 2 attempts left_20250909_134303.png' src="screenshots\OTP verification failed: Incorrect OTP, 2 attempts left_20250909_134303.png">
   
     
 
@@ -245,17 +293,9 @@
       </tr>
       <tr class="event-row">
         <td><span class="badge log pass-bg">Pass</span></td>
-        <td>9:08:06 pm</td>
+        <td>1:43:03 pm</td>
         <td>
-          Profile validation 
-    <div class="row mb-3"><div class="col-md-3">
-    
-
-<img data-featherlight='D:\CapgeminiTesting\Apollo_247_testing_app\screenshot\Profile_validation__20250908_210806.png' src="D:\CapgeminiTesting\Apollo_247_testing_app\screenshot\Profile_validation__20250908_210806.png">
-  
-    
-
-    </div></div>
+          Scenario passed successfully.
         </td>
       </tr>
   </tbody>
@@ -268,9 +308,78 @@
           tag=""
           device="">
           <div class="test-detail">
+            <p class="name">user is able to login with valid phone number</p>
+            <p class="text-sm">
+              <span>1:43:03 pm</span> / <span>00:00:23:773</span>
+              <span class="badge pass-bg log float-right">Pass</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-pass">user is able to login with valid phone number</h5>
+<span class='badge badge-success'>09.09.2025 1:43:03 pm</span>
+<span class='badge badge-danger'>09.09.2025 1:43:27 pm</span>
+<span class='badge badge-default'>00:00:23:773</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:43:03 pm</td>
+        <td>
+          Browser launched and page objects initialized.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:16 pm</td>
+        <td>
+          Entered OTP and clicked verify within 45 seconds
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:27 pm</td>
+        <td>
+          OTP verified successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:27 pm</td>
+        <td>
+          Profile validation 
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:27 pm</td>
+        <td>
+          Scenario passed successfully.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="pass" test-id="6"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
             <p class="name">user able to open buy medicines</p>
             <p class="text-sm">
-              <span>9:08:06 pm</span> / <span>00:00:00:000</span>
+              <span>1:43:27 pm</span> / <span>00:00:03:329</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -279,25 +388,60 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">user able to open buy medicines</h5>
-<span class='badge badge-success'>09.08.2025 9:08:06 pm</span>
-<span class='badge badge-danger'>09.08.2025 9:08:06 pm</span>
-<span class='badge badge-default'>00:00:00:000</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=5</span>
+<span class='badge badge-success'>09.09.2025 1:43:27 pm</span>
+<span class='badge badge-danger'>09.09.2025 1:43:30 pm</span>
+<span class='badge badge-default'>00:00:03:329</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:43:27 pm</td>
+        <td>
+          Browser launched and page objects initialized.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:30 pm</td>
+        <td>
+          Clicked on 'Buy Medicine'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:30 pm</td>
+        <td>
+          Validated 'Buy Medicine' page successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:30 pm</td>
+        <td>
+          Scenario passed successfully.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
-        <li class="test-item"  status="pass" test-id="6"
+        <li class="test-item"  status="pass" test-id="7"
           author=""
           tag=""
           device="">
           <div class="test-detail">
             <p class="name">user able to open apollo products</p>
             <p class="text-sm">
-              <span>9:08:11 pm</span> / <span>00:00:00:000</span>
+              <span>1:43:30 pm</span> / <span>00:00:03:069</span>
               <span class="badge pass-bg log float-right">Pass</span>
             </p>
           </div>
@@ -306,43 +450,322 @@
 <div class="p-v-10">
 <div class="info">
 <h5 class="test-status text-pass">user able to open apollo products</h5>
-<span class='badge badge-success'>09.08.2025 9:08:11 pm</span>
-<span class='badge badge-danger'>09.08.2025 9:08:11 pm</span>
-<span class='badge badge-default'>00:00:00:000</span>
-&middot; <span class='uri-anchor badge badge-default'>#test-id=6</span>
-<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
-<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
-<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
-</div>
-</div>
-</div>          </div>
-        </li>
-        <li class="test-item"  status="pass" test-id="7"
-          author=""
-          tag=""
-          device="">
-          <div class="test-detail">
-            <p class="name">user able to open personal care in apollo products</p>
-            <p class="text-sm">
-              <span>9:08:12 pm</span> / <span>00:00:00:000</span>
-              <span class="badge pass-bg log float-right">Pass</span>
-            </p>
-          </div>
-          <div class="test-contents d-none">
-<div class="detail-head">
-<div class="p-v-10">
-<div class="info">
-<h5 class="test-status text-pass">user able to open personal care in apollo products</h5>
-<span class='badge badge-success'>09.08.2025 9:08:12 pm</span>
-<span class='badge badge-danger'>09.08.2025 9:08:12 pm</span>
-<span class='badge badge-default'>00:00:00:000</span>
+<span class='badge badge-success'>09.09.2025 1:43:30 pm</span>
+<span class='badge badge-danger'>09.09.2025 1:43:33 pm</span>
+<span class='badge badge-default'>00:00:03:069</span>
 &middot; <span class='uri-anchor badge badge-default'>#test-id=7</span>
 <span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
 <span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
 <span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
 </div>
 </div>
-</div>          </div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:43:30 pm</td>
+        <td>
+          Browser launched and page objects initialized.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:31 pm</td>
+        <td>
+          Clicked on 'Apollo Products'
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:33 pm</td>
+        <td>
+          Validated 'Apollo Products' page successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:33 pm</td>
+        <td>
+          Scenario passed successfully.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="8"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">user able to open personal care in apollo products</p>
+            <p class="text-sm">
+              <span>1:43:33 pm</span> / <span>00:00:19:828</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">user able to open personal care in apollo products</h5>
+<span class='badge badge-success'>09.09.2025 1:43:33 pm</span>
+<span class='badge badge-danger'>09.09.2025 1:43:53 pm</span>
+<span class='badge badge-default'>00:00:19:828</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=8</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:43:33 pm</td>
+        <td>
+          Browser launched and page objects initialized.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:34 pm</td>
+        <td>
+          Clicked on Personal Care
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>1:43:37 pm</td>
+        <td>
+          Exception clicking Skin Care: element click intercepted: Element <a class="CategoryTreeWeb_l3CategoryTitle__Pmpra " href="/shop-by-category/apollo-skin-care">...</a> is not clickable at point (300, 138). Other element would receive the click: <a href="/shop-by-category/baby-care">...</a>
+  (Session info: chrome=140.0.7339.81)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fdac791c29fa67febcf5ceca743aa1f9, clickElement {id=f.8B12DC3EA77818EE1EBF223130E1ADB2.d.84CD75ACBF61EE41F5EA321CE1ADCFDD.e.269}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56360/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fdac791c29fa67febcf5ceca743aa1f9)] -> xpath: //a[text()='Skin Care']]
+Session ID: fdac791c29fa67febcf5ceca743aa1f9
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots\Exception clicking Skin Care: element click intercepted: Element <a class="CategoryTreeWeb_l3CategoryTitle__Pmpra " href="/shop-by-category/apollo-skin-care">...</a> is not clickable at point (300, 138). Other element would receive the click: <a href="/shop-by-category/baby-care">...</a>
+  (Session info: chrome=140.0.7339.81)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fdac791c29fa67febcf5ceca743aa1f9, clickElement {id=f.8B12DC3EA77818EE1EBF223130E1ADB2.d.84CD75ACBF61EE41F5EA321CE1ADCFDD.e.269}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56360/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fdac791c29fa67febcf5ceca743aa1f9)] -> xpath: //a[text()='Skin Care']]
+Session ID: fdac791c29fa67febcf5ceca743aa1f9_20250909_134337.png' src="screenshots\Exception clicking Skin Care: element click intercepted: Element <a class="CategoryTreeWeb_l3CategoryTitle__Pmpra " href="/shop-by-category/apollo-skin-care">...</a> is not clickable at point (300, 138). Other element would receive the click: <a href="/shop-by-category/baby-care">...</a>
+  (Session info: chrome=140.0.7339.81)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fdac791c29fa67febcf5ceca743aa1f9, clickElement {id=f.8B12DC3EA77818EE1EBF223130E1ADB2.d.84CD75ACBF61EE41F5EA321CE1ADCFDD.e.269}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56360/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fdac791c29fa67febcf5ceca743aa1f9)] -> xpath: //a[text()='Skin Care']]
+Session ID: fdac791c29fa67febcf5ceca743aa1f9_20250909_134337.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>1:43:39 pm</td>
+        <td>
+          Exception clicking Aloe Vera product: element click intercepted: Element <img srcset="https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-1,c-at_max 150w, https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-2,c-at_max 300w, https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-3,c-at_max 450w, https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-4,c-at_max 600w, https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-5,c-at_max 750w, https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-6,c-at_max 900w" src="https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-3,c-at_max 450w" sizes="150px" alt="Apollo Life Aloe Vera Skin Care Gel, 200 gm (2x100 gm)" title="Apollo Life Aloe Vera Skin Care Gel, 200 gm (2x100 gm)" width="140" height="140" loading="lazy" fetchpriority="low" class="oH  "> is not clickable at point (630, 70). Other element would receive the click: <ul class="Header_navRoot__zQKG5">...</ul>
+  (Session info: chrome=140.0.7339.81)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fdac791c29fa67febcf5ceca743aa1f9, clickElement {id=f.8B12DC3EA77818EE1EBF223130E1ADB2.d.84CD75ACBF61EE41F5EA321CE1ADCFDD.e.394}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56360/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fdac791c29fa67febcf5ceca743aa1f9)] -> xpath: //img[contains(@alt,'Aloe Vera Skin Care Gel')]]
+Session ID: fdac791c29fa67febcf5ceca743aa1f9
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots\Exception clicking Aloe Vera product: element click intercepted: Element <img srcset="https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-1,c-at_max 150w, https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-2,c-at_max 300w, https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-3,c-at_max 450w, https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-4,c-at_max 600w, https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-5,c-at_max 750w, https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-6,c-at_max 900w" src="https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-3,c-at_max 450w" sizes="150px" alt="Apollo Life Aloe Vera Skin Care Gel, 200 gm (2x100 gm)" title="Apollo Life Aloe Vera Skin Care Gel, 200 gm (2x100 gm)" width="140" height="140" loading="lazy" fetchpriority="low" class="oH  "> is not clickable at point (630, 70). Other element would receive the click: <ul class="Header_navRoot__zQKG5">...</ul>
+  (Session info: chrome=140.0.7339.81)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fdac791c29fa67febcf5ceca743aa1f9, clickElement {id=f.8B12DC3EA77818EE1EBF223130E1ADB2.d.84CD75ACBF61EE41F5EA321CE1ADCFDD.e.394}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56360/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fdac791c29fa67febcf5ceca743aa1f9)] -> xpath: //img[contains(@alt,'Aloe Vera Skin Care Gel')]]
+Session ID: fdac791c29fa67febcf5ceca743aa1f9_20250909_134339.png' src="screenshots\Exception clicking Aloe Vera product: element click intercepted: Element <img srcset="https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-1,c-at_max 150w, https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-2,c-at_max 300w, https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-3,c-at_max 450w, https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-4,c-at_max 600w, https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-5,c-at_max 750w, https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-6,c-at_max 900w" src="https://images.apollo247.in/pub/media/catalog/product/a/p/apa0089_1-sep2023.jpg?tr=q-80,f-webp,w-150,dpr-3,c-at_max 450w" sizes="150px" alt="Apollo Life Aloe Vera Skin Care Gel, 200 gm (2x100 gm)" title="Apollo Life Aloe Vera Skin Care Gel, 200 gm (2x100 gm)" width="140" height="140" loading="lazy" fetchpriority="low" class="oH  "> is not clickable at point (630, 70). Other element would receive the click: <ul class="Header_navRoot__zQKG5">...</ul>
+  (Session info: chrome=140.0.7339.81)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fdac791c29fa67febcf5ceca743aa1f9, clickElement {id=f.8B12DC3EA77818EE1EBF223130E1ADB2.d.84CD75ACBF61EE41F5EA321CE1ADCFDD.e.394}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56360/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fdac791c29fa67febcf5ceca743aa1f9)] -> xpath: //img[contains(@alt,'Aloe Vera Skin Care Gel')]]
+Session ID: fdac791c29fa67febcf5ceca743aa1f9_20250909_134339.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>1:43:50 pm</td>
+        <td>
+          Failed to click Add to Cart
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots\Failed to click Add to Cart_20250909_134350.png' src="screenshots\Failed to click Add to Cart_20250909_134350.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:51 pm</td>
+        <td>
+          Clicked on View Cart
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:52 pm</td>
+        <td>
+          Cart validated successfully
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:53 pm</td>
+        <td>
+          Scenario passed successfully.
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
+        </li>
+        <li class="test-item"  status="fail" test-id="9"
+          author=""
+          tag=""
+          device="">
+          <div class="test-detail">
+            <p class="name">user unable to add a product in cart</p>
+            <p class="text-sm">
+              <span>1:43:53 pm</span> / <span>00:00:16:047</span>
+              <span class="badge fail-bg log float-right">Fail</span>
+            </p>
+          </div>
+          <div class="test-contents d-none">
+<div class="detail-head">
+<div class="p-v-10">
+<div class="info">
+<h5 class="test-status text-fail">user unable to add a product in cart</h5>
+<span class='badge badge-success'>09.09.2025 1:43:53 pm</span>
+<span class='badge badge-danger'>09.09.2025 1:44:09 pm</span>
+<span class='badge badge-default'>00:00:16:047</span>
+&middot; <span class='uri-anchor badge badge-default'>#test-id=9</span>
+<span title='Skip to the next failed step' class='badge badge-danger pointer float-right ne ml-1'><i class="fa fa-fast-forward"></i></span>
+<span title='Collapse all nodes' class='badge badge-default pointer float-right ct ml-1'><i class="fa fa-compress"></i></span>
+<span title='Expand all nodes' class='badge badge-default pointer float-right et'><i class="fa fa-expand"></i></span>
+</div>
+</div>
+</div><div class="detail-body mt-4">
+<table class="table table-sm">
+  <thead><tr><th class="status-col">Status</th><th class="timestamp-col">Timestamp</th><th class="details-col">Details</th></tr></thead>
+  <tbody>
+      <tr class="event-row">
+        <td><span class="badge log info-bg">Info</span></td>
+        <td>1:43:53 pm</td>
+        <td>
+          Browser launched and page objects initialized.
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:54 pm</td>
+        <td>
+          Clicked on Brand
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log pass-bg">Pass</span></td>
+        <td>1:43:55 pm</td>
+        <td>
+          Clicked on Apollo Pharmacy
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>1:43:58 pm</td>
+        <td>
+          Exception clicking Add button in Brand Product: element click intercepted: Element <span>...</span> is not clickable at point (630, 10). Other element would receive the click: <div class="SearchPlaceholder_sRoot__ZK2aL" data-placeholder="Search Medicines">...</div>
+  (Session info: chrome=140.0.7339.81)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fdac791c29fa67febcf5ceca743aa1f9, clickElement {id=f.8B12DC3EA77818EE1EBF223130E1ADB2.d.84CD75ACBF61EE41F5EA321CE1ADCFDD.e.670}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56360/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fdac791c29fa67febcf5ceca743aa1f9)] -> xpath: //span[text()='Add']]
+Session ID: fdac791c29fa67febcf5ceca743aa1f9
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots\Exception clicking Add button in Brand Product: element click intercepted: Element <span>...</span> is not clickable at point (630, 10). Other element would receive the click: <div class="SearchPlaceholder_sRoot__ZK2aL" data-placeholder="Search Medicines">...</div>
+  (Session info: chrome=140.0.7339.81)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fdac791c29fa67febcf5ceca743aa1f9, clickElement {id=f.8B12DC3EA77818EE1EBF223130E1ADB2.d.84CD75ACBF61EE41F5EA321CE1ADCFDD.e.670}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56360/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fdac791c29fa67febcf5ceca743aa1f9)] -> xpath: //span[text()='Add']]
+Session ID: fdac791c29fa67febcf5ceca743aa1f9_20250909_134358.png' src="screenshots\Exception clicking Add button in Brand Product: element click intercepted: Element <span>...</span> is not clickable at point (630, 10). Other element would receive the click: <div class="SearchPlaceholder_sRoot__ZK2aL" data-placeholder="Search Medicines">...</div>
+  (Session info: chrome=140.0.7339.81)
+Build info: version: '4.35.0', revision: '1c58e5028b'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.7'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [fdac791c29fa67febcf5ceca743aa1f9, clickElement {id=f.8B12DC3EA77818EE1EBF223130E1ADB2.d.84CD75ACBF61EE41F5EA321CE1ADCFDD.e.670}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 140.0.7339.81, chrome: {chromedriverVersion: 140.0.7339.80 (670b6f192f46..., userDataDir: C:\Users\DELL\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:56360}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:56360/devtoo..., se:cdpVersion: 140.0.7339.81, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (fdac791c29fa67febcf5ceca743aa1f9)] -> xpath: //span[text()='Add']]
+Session ID: fdac791c29fa67febcf5ceca743aa1f9_20250909_134358.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+      <tr class="event-row">
+        <td><span class="badge log fail-bg">Fail</span></td>
+        <td>1:44:09 pm</td>
+        <td>
+          Skin Care page validation failed
+    <div class="row mb-3"><div class="col-md-3">
+    
+
+<img data-featherlight='screenshots\Skin Care page validation failed_20250909_134409.png' src="screenshots\Skin Care page validation failed_20250909_134409.png">
+  
+    
+
+    </div></div>
+        </td>
+      </tr>
+  </tbody>
+</table>
+</div>
+          </div>
         </li>
       </ul>
     </div>
@@ -358,25 +781,25 @@
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Started</p>
-<h3>Sept 8, 2025 09:07:16 pm</h3>
+<h3>Sept 9, 2025 01:42:28 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0">Ended</p>
-<h3>Sept 8, 2025 09:08:17 pm</h3>
+<h3>Sept 9, 2025 01:44:09 pm</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-pass">Tests Passed</p>
-<h3>7</h3>
+<h3>6</h3>
 </div></div>
 </div>
 <div class="col-md-3">
 <div class="card"><div class="card-body">
 <p class="m-b-0 text-fail">Tests Failed</p>
-<h3>0</h3>
+<h3>3</h3>
 </div></div>
 </div>
 </div>
@@ -392,12 +815,12 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'>
-<b>7</b> tests passed
+<div><small data-tooltip='66%'>
+<b>6</b> tests passed
 </small>
 </div>
 <div>
-<small data-tooltip='0%'><b>0</b> tests failed,
+<small data-tooltip='33%'><b>3</b> tests failed,
 <b>0</b> skipped, <b data-tooltip='0%'>0</b> others
 </small>
 </div>
@@ -415,10 +838,10 @@
 </div>
 </div>
 <div class="card-footer">
-<div><small data-tooltip='100%'><b>4</b> events passed</small></div>
+<div><small data-tooltip='55%'><b>21</b> events passed</small></div>
 <div>
-<small data-tooltip='0%'><b>0</b> events failed,
-<b data-tooltip='%'>0</b> others
+<small data-tooltip='15%'><b>6</b> events failed,
+<b data-tooltip='%'>11</b> others
 </small>
 </div>
 </div>
@@ -434,7 +857,7 @@
 </div></div>
 <script>
 var timeline = {
-"User launches the website in different browsers":0,"Unnamed Scenario":4.628,"user unable to login with empty field":0.294,"user is able to login with valid phone number":33.544,"user able to open buy medicines":0,"user able to open apollo products":0,"user able to open personal care in apollo products":0
+"User launches the website in different browsers":1.311,"user unable to login with invalid phone number":7.042,"user unable to login with invalid phone number":4.939,"user is unable to login with invalid OTP":15.327,"user is able to login with valid phone number":23.773,"user able to open buy medicines":3.329,"user able to open apollo products":3.069,"user able to open personal care in apollo products":19.828,"user unable to add a product in cart":16.047
 };
 </script>
 <div class="row">
@@ -443,8 +866,8 @@ var timeline = {
 <script>
 var statusGroup = {
 parentCount: 5,
-passParent: 7,
-failParent: 0,
+passParent: 6,
+failParent: 3,
 warningParent: 0,
 skipParent: 0,
 childCount: 5,
@@ -460,11 +883,11 @@ warningGrandChild: 0,
 skipGrandChild: 0,
 infoGrandChild: 0,
 eventsCount: 5,
-passEvents: 4,
-failEvents: 0,
+passEvents: 21,
+failEvents: 6,
 warningEvents: 0,
 skipEvents: 0,
-infoEvents: 0
+infoEvents: 11
 };
 </script>        </div>
       </div>

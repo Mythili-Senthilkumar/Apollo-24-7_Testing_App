@@ -16,6 +16,9 @@ public class Locators {
 	// for otp field
 	public static By otpfield=By.xpath("//input[@title='Please enter the otp']");
 	
+	//for resend otp
+	public static By resendOtpButton = By.xpath("//span[text()='Resend OTP']");
+	
 	// for verify button
 	public static By verifybutton=By.xpath("//button[text()='Verify']");
 	
@@ -45,6 +48,18 @@ public class Locators {
 	
 	// for view cart click
 	public static By viewcartclick=By.xpath("//span[text()='View Cart']");
+	
+	// for brand click
+	public static By brandclick=By.xpath("//*[text()='Brands']");
+	
+	//for checkbox click
+	public static By apollopharmacyclick=By.xpath("//div[@class='gB hB CategoryFilterWeb_paddingTb8__6EuUW CategoryFilterWeb_labelCustom__XasvL  '][2]");
+	
+	//for add click
+	public static By addclick=By.xpath("//span[text()='Add']");
+
+	
+
 	
 	
 }

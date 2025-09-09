@@ -16,48 +16,59 @@ import com.aventstack.extentreports.Status;
 
 public class Reporter {
 
-    public static void reportFail(WebDriver driver, ExtentTest extTest, String message) throws IOException {
-        String screenshotPath = takeScreenshot(driver, message);
-        extTest.log(Status.FAIL, message,
-		        MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+    // Fail reporting → only "FAILED" message + screenshot
+    public static void reportFail(WebDriver driver, ExtentTest extTest, String message) {
+        try {
+            String screenshotPath = takeScreenshot(driver, "FAIL");
+            if (screenshotPath != null && !screenshotPath.isEmpty()) {
+                extTest.log(Status.FAIL, "FAILED: " + message,
+                        MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+            } else {
+                extTest.log(Status.FAIL, "FAILED: " + message + " (Screenshot not available)");
+            }
+        } catch (Exception e) {
+            extTest.log(Status.FAIL, "FAILED: " + message + " (Screenshot capture failed)");
+        }
     }
 
-    public static void reportPass(WebDriver driver, ExtentTest extTest, String message) throws IOException {
-        String screenshotPath = takeScreenshot(driver, message);
-        extTest.log(Status.PASS, message,
-		        MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());
+    // Pass reporting → only message (no screenshot)
+    public static void reportPass(ExtentTest extTest, String message) {
+        extTest.log(Status.PASS, message);
     }
-    
+
+    // Generic report → decide based on status
     public static void generateReport(WebDriver driver, ExtentTest extTest, Status status, String stepMessage) {
         if (status == Status.PASS) {
-            try {
-				reportPass(driver, extTest, stepMessage);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}   // calls existing method that captures screenshot
+            reportPass(extTest, stepMessage);
         } else if (status == Status.FAIL) {
-            try {
-				reportFail(driver, extTest, stepMessage);
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}   // calls existing method that captures screenshot
+            reportFail(driver, extTest, stepMessage);
         }
     }
 
-
-    private static String takeScreenshot(WebDriver driver, String name) {
-        String folderPath = System.getProperty("user.dir") + File.separator + "screenshot" + File.separator;
-        new File(folderPath).mkdirs();
-        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
-        String fileName = folderPath + name.replaceAll("[^a-zA-Z0-9]", "_") + "_" + timestamp + ".png";
-        File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+    // Screenshot helper
+    public static String takeScreenshot(WebDriver driver, String screenshotName) {
+        String screenshotPath = "";
         try {
-            FileUtils.copyFile(src, new File(fileName));
+            File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+
+            // Folder creation
+            String folder = "screenshots";
+            File destFolder = new File(folder);
+            if (!destFolder.exists()) {
+                destFolder.mkdirs();
+            }
+
+            // Safe filename
+            String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
+            String safeName = screenshotName.replaceAll("[^a-zA-Z0-9_-]", "_");
+            screenshotPath = folder + File.separator + safeName + "_" + timestamp + ".png";
+
+            File dest = new File(screenshotPath);
+            FileUtils.copyFile(src, dest);
+
         } catch (IOException e) {
-            e.printStackTrace();
+            System.out.println("Screenshot capture failed: " + e.getMessage());
         }
-        return fileName;
+        return screenshotPath;
     }
 }

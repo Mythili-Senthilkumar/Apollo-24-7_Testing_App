@@ -1,16 +1,15 @@
 package stepdefinitions;
 
 import java.util.Scanner;
-
 import io.cucumber.java.en.*;
 import setup.Hooks;
 
 public class Login_validPhone_stepdef {
 
- 
     @When("the user enters valid {string}")
     public void the_user_enters_valid(String number) {
-    	Hooks.loginPage.clickLoginButton();
+        // Reuse common login button click
+        Hooks.loginPage.clickLoginButton();
         Hooks.loginPage.enterMobileNumber(number);
     }
 
@@ -21,18 +20,38 @@ public class Login_validPhone_stepdef {
 
     @When("the user enters the otp")
     public void the_user_enters_the_otp() {
-        Scanner scanner=new Scanner(System.in);
-        System.out.println("Enter OTP: ");
-        String otp=scanner.nextLine();
-   
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter OTP (you have 45 sec): ");
+
+        String otp = "";
+        long startTime = System.currentTimeMillis();
+
+        // Wait up to 45 sec for OTP input
+        while ((System.currentTimeMillis() - startTime) < 45000 && otp.isEmpty()) {
+            try {
+                if (System.in.available() > 0) {  // User typed something
+                    otp = scanner.nextLine();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        // If no OTP entered within 45 sec, click resend
+        if (otp.isEmpty()) {
+            System.out.println("OTP not entered. Clicking Resend OTP...");
+            Hooks.loginPage.resendOtp(otp);
+            System.out.print("Enter OTP after resend: ");
+            otp = scanner.nextLine();
+        }
+
+        // Enter and validate OTP
         Hooks.loginPage.enterOtp(otp);
         Hooks.loginPage.validateOtpResult();
-        	
     }
-    
+
     @Then("the user validates profile created")
     public void the_user_validates_profile_created() {
-       Hooks.loginPage.validateProfilePage();
-  }
-    
+        Hooks.loginPage.validateProfilePage();
+    }
 }

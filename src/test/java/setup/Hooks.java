@@ -27,38 +27,59 @@ public class Hooks {
 
     @Before(order = 0)
     public void setUp(Scenario scenario) {
-        // Init ExtentReports once
-        if (extReport == null) {
-            ExtentSparkReporter spark = new ExtentSparkReporter("reports/ExtentReport.html");
-            extReport = new ExtentReports();
-            extReport.attachReporter(spark);
-        }
+        try {
+            //  Initialize ExtentReports once
+            if (extReport == null) {
+                ExtentSparkReporter spark = new ExtentSparkReporter("reports/ExtentReport.html");
+                extReport = new ExtentReports();
+                extReport.attachReporter(spark);
+            }
 
-        // Open browser only once
-        if (driver == null) {
-            driver = new ChromeDriver();
-            driver.manage().window().maximize();
-            driver.get("https://www.apollo247.com/");
-        }
+            // Open browser if not already started
+            if (driver == null) {
+                driver = new ChromeDriver();
+                driver.manage().window().maximize();
+                driver.get("https://www.apollo247.com/");
+            }
 
-        // Always create new ExtentTest for each scenario
-        String testName = scenario.getName();
-        if (testName == null || testName.trim().isEmpty()) {
-            testName = "Unnamed Scenario";
-        }
-        extTest = extReport.createTest(testName);
+            // Create new ExtentTest for each scenario
+            String testName = scenario.getName();
+            if (testName == null || testName.trim().isEmpty()) {
+                testName = "Unnamed Scenario";
+            }
+            extTest = extReport.createTest(testName);
 
-        // Re-init page objects for every scenario
-        loginPage = new LoginPage(driver, extTest);
-        buymedicinePage = new BuyMedicinePage(driver, extTest);
-        apolloProductsPage = new ApolloProductsPage(driver, extTest);
-        personalcarePage = new PersonalcarePage(driver, extTest);
+            // Initialize page objects for every scenario
+            loginPage = new LoginPage(driver, extTest);
+            buymedicinePage = new BuyMedicinePage(driver, extTest);
+            apolloProductsPage = new ApolloProductsPage(driver, extTest);
+            personalcarePage = new PersonalcarePage(driver, extTest);
+
+            extTest.info("Browser launched and page objects initialized.");
+
+        } catch (Exception e) {
+            if (extTest != null) {
+                extTest.fail("Failed during setup: " + e.getMessage());
+            }
+            throw e;
+        }
     }
 
     @After(order = 0)
-    public void tearDown() {
-        // Keep browser open for reuse during test run
-        // Close it at suite level if needed
+    public void tearDown(Scenario scenario) {
+        try {
+            if (scenario.isFailed()) {
+                String screenshotPath = Reporter.takeScreenshot(driver, scenario.getName());
+                extTest.fail("Scenario failed, screenshot captured.")
+                       .addScreenCaptureFromPath(screenshotPath);
+            } else {
+                extTest.pass("Scenario passed successfully.");
+            }
+        } catch (Exception e) {
+            if (extTest != null) {
+                extTest.warning("Could not attach screenshot: " + e.getMessage());
+            }
+        }
     }
 
     @After(order = 1)

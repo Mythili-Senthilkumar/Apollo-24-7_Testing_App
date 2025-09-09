@@ -1,25 +1,19 @@
 package stepdefinitions;
 
-import org.testng.Assert;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
+import pages.LoginPage;
 import setup.Hooks;
 
 public class Login_invalidPhone_stepdef {
 
-    @Given("the user is on main page")
-    public void the_user_is_on_main_page() {
-        // Reuse existing browser, no new get()
-        Assert.assertEquals(Hooks.driver.getCurrentUrl(), "https://www.apollo247.com/");
-    }
+    LoginPage loginPage;
 
-    @When("the user clicks on login button")
-    public void the_user_clicks_on_login_button() {
-        Hooks.loginPage.clickLoginButton();
+    public Login_invalidPhone_stepdef() {
+        loginPage = new LoginPage(Hooks.driver, Hooks.extTest);
     }
 
     @When("the user enters invalid {string}")
-    public void the_user_enters_invalid(String number) {
-        Hooks.loginPage.enterInvalidMobileNumber(number);
+    public void the_user_enters_invalid_phone_number(String phoneNumber) {
+        loginPage.enterInvalidMobileNumber(phoneNumber);
     }
 }
