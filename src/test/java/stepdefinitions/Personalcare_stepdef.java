@@ -19,12 +19,13 @@ public class Personalcare_stepdef {
     
     @When("user selects apollo life aloe vera skin care gel product")
     public void user_selects_apollo_life_aloe_vera_skin_care_gel_product() {
-        Hooks.personalcarePage.clickProduct();
+        Hooks.personalcarePage.productClick();
     }
     
     @When("user clicks add to cart button")
     public void user_clicks_add_to_cart_button() {
-        Hooks.personalcarePage.addProductToCartAndView();
+        Hooks.personalcarePage.addClick();;
+        Hooks.personalcarePage.viewCartclick();
     }
     
     @Then("user validates the cart page")

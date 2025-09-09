@@ -11,6 +11,7 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import pages.ApolloProductsPage;
+import pages.BabycarePage;
 import pages.BuyMedicinePage;
 import pages.LoginPage;
 import pages.PersonalcarePage;
@@ -20,10 +21,12 @@ public class Hooks {
     public static WebDriver driver;
     public static ExtentReports extReport;
     public static ExtentTest extTest;
+    
     public static LoginPage loginPage;
     public static BuyMedicinePage buymedicinePage;
     public static ApolloProductsPage apolloProductsPage;
-    public static PersonalcarePage personalcarePage;
+   public static PersonalcarePage personalcarePage;
+    public static BabycarePage babycarePage;
 
     @Before(order = 0)
     public void setUp(Scenario scenario) {
@@ -53,7 +56,12 @@ public class Hooks {
             loginPage = new LoginPage(driver, extTest);
             buymedicinePage = new BuyMedicinePage(driver, extTest);
             apolloProductsPage = new ApolloProductsPage(driver, extTest);
-            personalcarePage = new PersonalcarePage(driver, extTest);
+           personalcarePage = new PersonalcarePage(driver, extTest);
+            babycarePage=new BabycarePage(driver,extTest);
+            
+            
+            
+            
 
             extTest.info("Browser launched and page objects initialized.");
 

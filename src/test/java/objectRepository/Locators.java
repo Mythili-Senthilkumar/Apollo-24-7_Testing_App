@@ -41,7 +41,7 @@ public class Locators {
 	public static By skincareclick=By.xpath("//a[text()='Skin Care']");
 	
 	//for aloevera gel product
-	public static By aloeVeraProduct = By.xpath("//img[contains(@alt,'Aloe Vera Skin Care Gel')]");
+	public static By aloeVeraProduct = By.xpath("//img[@alt='Apollo Life Aloe Vera Skin Care Gel, 200 gm (2x100 gm)']");
 
 	// for add to cart button
 	public static By addtocartbutton=By.xpath("//span[text()='Add to Cart']");
@@ -49,17 +49,53 @@ public class Locators {
 	// for view cart click
 	public static By viewcartclick=By.xpath("//span[text()='View Cart']");
 	
-	// for brand click
-	public static By brandclick=By.xpath("//*[text()='Brands']");
+	//for handwash click
+	public static By handwashclick=By.xpath("//h2[text()='Apollo Pharmacy Premium Aqua Blue Handwash, 500 ml (2x250 ml)']");
 	
-	//for checkbox click
-	public static By apollopharmacyclick=By.xpath("//div[@class='gB hB CategoryFilterWeb_paddingTb8__6EuUW CategoryFilterWeb_labelCustom__XasvL  '][2]");
+	//for add click disabled
+	public static By addclickdisable=By.xpath("//p[contains(text(),'currently unavailable')]");
 	
-	//for add click
-	public static By addclick=By.xpath("//span[text()='Add']");
+/*****************************************************************************/
+	
+	// for babycare click
+	public static By babycareclick=By.xpath("(//a[text()='Baby Care'])[1]");
+	
+	//for baby food click
+	public static By babyfoodclick=By.xpath("//a[text()='Baby Food']");
 
+	//for baby cereals
+	public static By babycearealclick=By.xpath("//a[text()='Baby Cereals']");
 	
+	//for sort click
+	public static By sortclick=By.xpath("//span[text()='Relevance']");
+	
+	//for low to high sort click
+	public static By lowtohighclick=By.xpath("//input[@name='product-sort' and @value='low-to-high']");
+	
+	//for baby cereal product add click
+	public static By babyproductclick=By.xpath("//span[text()='Add'][1]");
+	
+/*********************************************************************************************************/
+	
+	// for baby skin
+	public static By babyskincareclick=By.xpath("//a[text()='Baby Skin Care']");
+	
+	//for sort click
+		//public static By sortclick=By.xpath("//span[text()='Relevance']");
+	
+	//for better discount click
+	public static By betterdiscountclick=By.xpath("//label[text()='Better Discount']");
+	
+	//for himalaya product click
+	public static By himalayaproductclick=By.xpath("//h2[text()='Himalaya Baby pH 5.5 Cream with Pure Cow Ghee, 200 ml']");
 
+	//for changing pack
+	public static By packchangeclick=By.cssSelector("header.hR");
 	
+	//for add to cart
+	public static By productaddclick=By.xpath("//span[text()='Add to Cart']");
 	
+	//for view cart click
+	public static By viewclick=By.xpath("//span[text()='View Cart']");
+
 }

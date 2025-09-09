@@ -43,11 +43,7 @@ public class LoginPage {
         loginBtn.click();
     }
 
-    // empty mobile field
-    public void emptyMobileNumberField() {
-        WebElement phonefield = wait.until(ExpectedConditions.visibilityOfElementLocated(Locators.mobilenumberfield));
-        phonefield.clear();
-    }
+   
     
     // enter invalid mobile number
     public void enterInvalidMobileNumber(String number) {
