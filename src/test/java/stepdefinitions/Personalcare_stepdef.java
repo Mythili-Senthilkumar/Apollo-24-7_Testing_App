@@ -9,12 +9,12 @@ public class Personalcare_stepdef {
 
     @Given("user clicks on personal care")
     public void user_clicks_on_personal_care() {
-        Hooks.personalcarePage.clickPersonalCare();
+        Hooks.personalcarePage.clickpersonalCare();
     }
     
     @When("user clicks on skin care")
     public void user_clicks_on_skin_care() {
-        Hooks.personalcarePage.clickSkinCare();
+        Hooks.personalcarePage.skinCare();
     }
     
     @When("user selects apollo life aloe vera skin care gel product")

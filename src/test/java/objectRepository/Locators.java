@@ -28,11 +28,13 @@ public class Locators {
 	// for cross click
 	public static By crossclick=By.cssSelector("span[aria-label='close button']");
 	
+	/***********************************************************************************************/
+	
 	//for buy medicine
 	public static By buymedicineclick=By.xpath("//a[text()='Buy Medicines']");
 	
 	// for apollo products
-	public static By apolloproductsclick=By.xpath("//a[text()='Apollo Products']");
+	public static By apolloproductsclick=By.linkText("Apollo Products");
 	
 	//for personal care
 	public static By personalcareclick=By.xpath("//span[text()='Personal Care']");
@@ -56,46 +58,21 @@ public class Locators {
 	public static By addclickdisable=By.xpath("//p[contains(text(),'currently unavailable')]");
 	
 /*****************************************************************************/
+	//touch cart-icon
+	public static By carticon=By.xpath("//a[contains(@href,'/medicines-cart')]");
 	
-	// for babycare click
-	public static By babycareclick=By.xpath("(//a[text()='Baby Care'])[1]");
+	// for cart page
+	public static By cartpage=By.xpath("//h2[text()='OFFERS & DISCOUNTS']");
 	
-	//for baby food click
-	public static By babyfoodclick=By.xpath("//a[text()='Baby Food']");
-
-	//for baby cereals
-	public static By babycearealclick=By.xpath("//a[text()='Baby Cereals']");
+	//for dropdown
+	public static By dropdown=By.xpath("//p[text()='Qty ']");
 	
-	//for sort click
-	public static By sortclick=By.xpath("//span[text()='Relevance']");
+	//for new quantity
+	public static By newquanity=By.xpath("//p[text()='3']");
 	
-	//for low to high sort click
-	public static By lowtohighclick=By.xpath("//input[@name='product-sort' and @value='low-to-high']");
+	//for validate 
+	public static By updatedquantity=By.xpath("//p[contains(text(),'Qty')]");
 	
-	//for baby cereal product add click
-	public static By babyproductclick=By.xpath("//span[text()='Add'][1]");
-	
-/*********************************************************************************************************/
-	
-	// for baby skin
-	public static By babyskincareclick=By.xpath("//a[text()='Baby Skin Care']");
-	
-	//for sort click
-		//public static By sortclick=By.xpath("//span[text()='Relevance']");
-	
-	//for better discount click
-	public static By betterdiscountclick=By.xpath("//label[text()='Better Discount']");
-	
-	//for himalaya product click
-	public static By himalayaproductclick=By.xpath("//h2[text()='Himalaya Baby pH 5.5 Cream with Pure Cow Ghee, 200 ml']");
-
-	//for changing pack
-	public static By packchangeclick=By.cssSelector("header.hR");
-	
-	//for add to cart
-	public static By productaddclick=By.xpath("//span[text()='Add to Cart']");
-	
-	//for view cart click
-	public static By viewclick=By.xpath("//span[text()='View Cart']");
-
+	//for remove
+	public static By deleteicon=By.xpath("//div[contains(@class, 'MedicineProductCard_deleteIcon__kZ81e')]");
 }

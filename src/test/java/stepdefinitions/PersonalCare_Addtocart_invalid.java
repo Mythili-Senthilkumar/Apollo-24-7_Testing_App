@@ -1,4 +1,4 @@
-/*package stepdefinitions;
+package stepdefinitions;
 
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -15,4 +15,4 @@ public class PersonalCare_Addtocart_invalid {
 	public void user_validates_the_skincare_page() {
 	  Hooks.personalcarePage.validateSkincare();
 	}
-}*/
+}

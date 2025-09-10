@@ -11,8 +11,8 @@ import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 import pages.ApolloProductsPage;
-import pages.BabycarePage;
 import pages.BuyMedicinePage;
+import pages.CartPage;
 import pages.LoginPage;
 import pages.PersonalcarePage;
 
@@ -26,7 +26,7 @@ public class Hooks {
     public static BuyMedicinePage buymedicinePage;
     public static ApolloProductsPage apolloProductsPage;
    public static PersonalcarePage personalcarePage;
-    public static BabycarePage babycarePage;
+    public static CartPage cartPage;
 
     @Before(order = 0)
     public void setUp(Scenario scenario) {
@@ -56,9 +56,8 @@ public class Hooks {
             loginPage = new LoginPage(driver, extTest);
             buymedicinePage = new BuyMedicinePage(driver, extTest);
             apolloProductsPage = new ApolloProductsPage(driver, extTest);
-           personalcarePage = new PersonalcarePage(driver, extTest);
-            babycarePage=new BabycarePage(driver,extTest);
-            
+            personalcarePage = new PersonalcarePage(driver, extTest);
+            cartPage = new CartPage(driver,extTest);
             
             
             
