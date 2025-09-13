@@ -10,11 +10,16 @@ import com.aventstack.extentreports.reporter.ExtentSparkReporter;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
-import pages.ApolloProductsPage;
-import pages.BuyMedicinePage;
-import pages.CartPage;
-import pages.LoginPage;
-import pages.PersonalcarePage;
+import pages.Address_Page;
+import pages.ApolloProducts_Page;
+import pages.BuyMedicine_Page;
+import pages.Cart_Page;
+//import pages.Coupon_Page;
+import pages.Login_Page;
+
+import pages.Payment_Page;
+import pages.Personalcare_Page;
+import pages.Profile_Page;
 
 public class Hooks {
 
@@ -22,12 +27,18 @@ public class Hooks {
     public static ExtentReports extReport;
     public static ExtentTest extTest;
     
-    public static LoginPage loginPage;
-    public static BuyMedicinePage buymedicinePage;
-    public static ApolloProductsPage apolloProductsPage;
-   public static PersonalcarePage personalcarePage;
-    public static CartPage cartPage;
+    public static Login_Page loginPage;
+    public static BuyMedicine_Page buymedicinePage;
+    public static ApolloProducts_Page apolloProductsPage;
+   public static Personalcare_Page personalcarePage;
 
+     
+       public static Payment_Page paymentPage;
+       public static Cart_Page cartPage;
+       public static Address_Page addressPage;
+       public static Profile_Page profilePage;
+       
+       
     @Before(order = 0)
     public void setUp(Scenario scenario) {
         try {
@@ -53,14 +64,17 @@ public class Hooks {
             extTest = extReport.createTest(testName);
 
             // Initialize page objects for every scenario
-            loginPage = new LoginPage(driver, extTest);
-            buymedicinePage = new BuyMedicinePage(driver, extTest);
-            apolloProductsPage = new ApolloProductsPage(driver, extTest);
-            personalcarePage = new PersonalcarePage(driver, extTest);
-            cartPage = new CartPage(driver,extTest);
-            
-            
-            
+            loginPage = new Login_Page(driver, extTest);
+            buymedicinePage = new BuyMedicine_Page(driver, extTest);
+            apolloProductsPage = new ApolloProducts_Page(driver, extTest);
+            personalcarePage = new Personalcare_Page(driver, extTest);
+           
+           // couponPage=new Coupon_Page (driver,extTest);
+            paymentPage=new Payment_Page(driver,extTest);
+            cartPage=new Cart_Page(driver,extTest);
+            addressPage=new Address_Page(driver,extTest);
+            profilePage=new Profile_Page(driver,extTest);
+           
 
             extTest.info("Browser launched and page objects initialized.");
 
